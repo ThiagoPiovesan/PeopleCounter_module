@@ -45,8 +45,8 @@ last_person_out = 0												# Número de pessoas que saiu última interação
 last_person_total = 0											# Número de pessoas total dentro última interação
 
 # Informações do Bot --> Ainda não está integrado...
-bot_token = '1517680282:AAFHGFkbfUUWojhWpwG2f-BznORE8aL7hYU'
-bot_chatID = '755363003'
+bot_token = ''
+bot_chatID = ''
 
 #==================================================================================================#
 # Demais Variáveis:
