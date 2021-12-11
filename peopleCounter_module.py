@@ -31,6 +31,7 @@ import requests
 from imutils.video import FPS
 #==================================================================================================#
 # Variáveis de Controle:
+
 line_aligment = 'horizontal'									# Define o alinhamento da linha de passagem
 log_init = False
 
@@ -251,8 +252,8 @@ def counter(cap, up_limit, down_limit, pts_L1, pts_L2, pts_L3, pts_L4, person_in
 
         # Binarização para eliminar as sombras (color gris)
         try:
-            ret,imBin= cv.threshold(fgmask,200,255,cv.THRESH_BINARY)
-            ret,imBin2 = cv.threshold(fgmask2,200,255,cv.THRESH_BINARY)
+            ret, imBin= cv.threshold(fgmask,200,255,cv.THRESH_BINARY)
+            ret, imBin2 = cv.threshold(fgmask2,200,255,cv.THRESH_BINARY)
 
             # Opening (erode->dilate) para quitar ruido.
             mask = cv.morphologyEx(imBin, cv.MORPH_OPEN, kernelOp)
@@ -339,7 +340,7 @@ def counter(cap, up_limit, down_limit, pts_L1, pts_L2, pts_L3, pts_L4, person_in
                 #################
 
                 cv.circle(frame, (cx,cy), 5, (0,0,255), -1)
-                img = cv.rectangle(frame, (x, y), (x + w, y + h), (0,255,0), 2)            
+                cv.rectangle(frame, (x, y), (x + w, y + h), (0,255,0), 2)            
                 # cv.drawContours(frame, cnt, -1, (0,255,0), 3)
 #--------------------------------------------------------------------------------------------------#               
         # END for cnt in contours0
